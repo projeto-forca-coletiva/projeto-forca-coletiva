@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Força Coletiva</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo Força Coletiva">
+                <span>Força Coletiva</span>
+            </div>
+            <nav>
+                <a href="#inicio" class="active">Início</a>
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Força que<br>Une Pessoas</h1>
+            <p>Um movimento criado para gerar impacto real na vida de quem mais precisa.</p>
+            <a href="#sobre" class="btn">Conheça o Movimento</a>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="about" id="sobre">
+  <div class="container">
+
+    <!-- BLOCO 1 -->
+    <div class="about-row">
+      <div class="about-text">
+        <h2>Sobre Nós</h2>
+        <p>
+          A Força Coletiva nasceu da percepção de que muitas realidades
+          precisavam de mais do que palavras. Precisavam de ação organizada,
+          contínua e comprometida.
+        </p>
+        <p>
+          Assim surgiu um movimento criado para transformar intenção
+          em impacto real.
+        </p>
+      </div>
+    </div>
+
+    <!-- BLOCO 2 -->
+    <div class="about-row reverse">
+      <div class="about-image logo-box">
+        <img src="images/logo.png" alt="Logo Força Coletiva">
+      </div>
+
+      <div class="about-text">
+        <h2>Nossa Identidade</h2>
+        <p>
+          O bisão foi escolhido como símbolo do projeto por representar
+          força coletiva, proteção e resistência.
+        </p>
+        <p>
+          Diferente da força individual, o bisão simboliza a união da manada —
+          força que protege, caminha junto e enfrenta desafios em grupo.
+        </p>
+        <p>
+          Essa é a essência da Força Coletiva: ninguém transforma nada sozinho.
+          Mas juntos, somos mais fortes.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-final">
+      <p>
+        Mais do que um projeto, representamos um compromisso contínuo
+        com impacto real.
+      </p>
+      <h3>Força Coletiva. Transformando intenção em ação.</h3>
+    </div>
+
+  </div>
+</section>
+
+<section class="impacto">
+    <div class="container">
+
+        <h2>Impacto em Ação</h2>
+
+        <div class="impacto-content">
+
+            <div class="video-box">
+                <video controls>
+                    <source src="video/acao.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="impacto-text">
+                <h3>Transformando realidades</h3>
+                <p>
+                    Cada ação representa mais do que um gesto.
+                    Representa cuidado, união e presença.
+                    Nosso trabalho acontece nas ruas, nas comunidades
+                    e principalmente na vida das pessoas.
+                </p>
+                <p>
+                    Aqui você vê um pouco do que fazemos —
+                    mas o impacto verdadeiro é sentido de perto.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco através do e-mail ou redes sociais.</p>
+        </div>
+
+        <div class="about-banner">
+    <img src="images/banner.jpg" alt="Banner Força Coletiva">
+</div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logos">
+            <h3>Colaboradores</h3>
+            <div class="logos">
+                <img src="images/logo1.png" alt="Logo Colaborador 1">
+                <img src="images/logo2.png" alt="Logo Colaborador 2">
+                <img src="images/logo3.png" alt="Logo Colaborador 3">
+            </div>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contato</h3>
+            <div class="social-icons">
+                <a href="mailto:contato@forcacoletiva.org" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://instagram.com/seuusuario" target="_blank" rel="noopener noreferrer" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Força Coletiva</p>
+        </div>
+    </footer>
+
+<script>
+
+document.querySelectorAll('.header nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').slice(1);
+        const targetSection = document.getElementById(targetId);
+        const headerOffset = 80;
+        const elementPosition = targetSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+
+        document.querySelector('nav').classList.remove('active');
+    });
+});
+
+const header = document.querySelector('.header');
+const hero = document.querySelector('.hero');
+
+window.addEventListener('scroll', function() {
+    const heroHeight = hero.offsetHeight;
+
+    if (window.scrollY > heroHeight - header.offsetHeight) {
+        header.classList.add('scroll-active');
+    } else {
+        header.classList.remove('scroll-active');
+    }
+});
+
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+  threshold: 0.3
+};
+
+const appearOnScroll = new IntersectionObserver(function(
+  entries,
+  appearOnScroll
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add('appear');
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+
+</script>
+</body>
+</html>
