@@ -1,8 +1,39 @@
-# 📌 Força Coletiva
+<p align="center">
+  <img src="https://projeto-forca-coletiva.github.io/projeto-forca-coletiva/images/banner.jpg" width="100%" alt="Banner Projeto Força Coletiva">
+</p>
 
-Este projeto consiste no desenvolvimento de um site criado com foco em organização, desempenho e boas práticas de desenvolvimento web.
+<h1 align="center" style="color:#14286a;">
+  Projeto Força Coletiva
+</h1>
 
-# Acesse: https://projeto-forca-coletiva.github.io/projeto-forca-coletiva/
+<p align="center">
+  <strong style="color:#14286a;">
+    Transformando realidades através da união e da solidariedade.
+  </strong>
+</p>
+
+---
+
+## 💙 Sobre o Projeto
+
+O **Projeto Força Coletiva** é um site desenvolvido com o objetivo de representar e fortalecer um projeto social voltado para pessoas em situação de vulnerabilidade e condições precárias.
+
+A proposta do site é:
+
+- Dar visibilidade à causa social  
+- Apresentar informações institucionais  
+- Exibir projetos realizados  
+- Mostrar colaboradores e apoiadores  
+- Facilitar o contato com a organização  
+
+Este projeto busca transmitir **união, empatia e impacto social positivo** através de uma identidade visual forte e profissional.
+
+---
+
+🔗 **Link oficial:**  
+
+
+---
 
 ## 👨‍💻 Desenvolvimento
 
@@ -13,8 +44,3 @@ Este projeto consiste no desenvolvimento de um site criado com foco em organiza�
 
 - **Dono do projeto:** Maxwel Sant’ana
 
-## 🛠️ Tecnologias Utilizadas
-
-- HTML  
-- CSS  
-- JavaScript  
