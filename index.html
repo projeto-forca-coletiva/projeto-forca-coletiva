@@ -11,6 +11,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- Favicon -->
+    <link rel="icon" href="favicon/favicon.ico">
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -26,7 +29,7 @@
             <nav>
                 <a href="#inicio" class="active">Início</a>
                 <a href="#sobre">Sobre Nós</a>
-                <a href="#projetos">Projetos</a>
+                <a href="projetos.html">Projetos</a>
                 <a href="#contato">Contato</a>
             </nav>
         </div>
@@ -148,16 +151,43 @@ A Força Coletiva é uma organização humanitária  dedicada à transformação
 <section class="banner-institucional">
 </section>
 
-    <!-- CONTATO -->
-    <section id="contato" class="contact">
-        <div class="container">
-            <h2>Contato</h2>
-            <p>Entre em contato conosco através do e-mail ou redes sociais.</p>
-        </div>
+    <section class="colaboradores">
+    <div class="container">
+        <h2 class="section-title">Colaboradores</h2>
 
-    </section>
+        <div class="colaboradores-logos">
+            <div class="colaborador-item">
+                <img src="images/LOGO1.0.png" alt="Instituto Novo Amanhecer">
+            </div>
+            <div class="colaborador-item">
+                <img src="images/LOGO2.0.png" alt="Instituto Novo Amanhecer">
+            </div>
+            <div class="colaborador-item">
+                <img src="images/LOGO3.0.png" alt="Instituto Novo Amanhecer">
+            </div>
+            <div class="colaborador-item">
+                <img src="images/LOGO4.0.png" class="logo-ajuste1" alt="Instituto Novo Amanhecer">
+            </div>
+            <div class="colaborador-item">
+                <img src="images/LOGO5.0.png" class="logo-ajuste2" alt="Instituto Novo Amanhecer">
+            </div>
+            <div class="colaborador-item">
+                <img src="images/LOGO6.0.png" class="logo-ajuste3" alt="Instituto Novo Amanhecer">
+            </div>
+            <div class="colaborador-item">
+                <img src="images/LOGO7.0.png" alt="Instituto Novo Amanhecer">
+            </div>
+            <div class="colaborador-item">
+                <img src="images/LOGO8.0.png" alt="Instituto Novo Amanhecer">
+            </div>
+        </div>
+    </div>
+</section>
 
 <footer class="footer">
+
+     <!-- CONTATO -->
+    <section id="contato" class="contact"></section>
 
     <div class="container footer-content">
 
@@ -185,48 +215,6 @@ A Força Coletiva é uma organização humanitária  dedicada à transformação
 
             <p class="footer-email">forcacoletivaprojeto@gmail.com</p>
         </div>
-
-        <!-- Patrocinadores -->
-        <div class="footer-col">
-            <h4>Patrocinadores</h4>
-
-            <div class="footer-logos">
-
-            <div class="logo-item">
-            <img src="images/logo1.png" class="logo1" alt="Patrocinador 1">
-            </div>
-
-            <div class="logo-item">
-            <img src="images/logo2.png" class="logo2" alt="Patrocinador 2">
-            </div>
-
-            <div class="logo-item">
-            <img src="images/logo3.png" class="logo3" alt="Patrocinador 3">
-            </div>
-            
-            <div class="logo-item">
-            <img src="images/logo4.png" class="logo4" alt="Patrocinador 4">
-            </div>
-
-            <div class="logo-item">
-            <img src="images/logo5.png" class="logo5" alt="Patrocinador 5">
-            </div>
-
-            <div class="logo-item">
-            <img src="images/logo6.png" class="logo6" alt="Patrocinador 6">
-            </div>
-
-            <div class="logo-item">
-            <img src="images/logo7.png" class="logo7" alt="Patrocinador 7">
-            </div>
-
-            <div class="logo-item">
-            <img src="images/logo8.png" class="logo8" alt="Patrocinador 8">
-            </div>
-
-            </div>
-        </div>
-
     </div>
 
     <!-- Linha institucional final -->
@@ -242,19 +230,28 @@ A Força Coletiva é uma organização humanitária  dedicada à transformação
 
 document.querySelectorAll('.header nav a').forEach(link => {
     link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').slice(1);
-        const targetSection = document.getElementById(targetId);
-        const headerOffset = 80;
-        const elementPosition = targetSection.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
+        const href = this.getAttribute('href');
 
-        document.querySelector('nav').classList.remove('active');
+        // Se começar com # → scroll suave
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const targetId = href.slice(1);
+            const targetSection = document.getElementById(targetId);
+            const headerOffset = 80;
+            const elementPosition = targetSection.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+
+            document.querySelector('nav').classList.remove('active');
+        }
+
+        // Se não começa com # → abre link normalmente (ex: projetos.html)
+        // Não precisa de e.preventDefault()
     });
 });
 
