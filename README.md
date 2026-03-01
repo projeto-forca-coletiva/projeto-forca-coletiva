@@ -32,6 +32,7 @@ Este projeto busca transmitir **união, empatia e impacto social positivo** atra
 
 🔗 **Link oficial:**  
 
+https://projeto-forca-coletiva.github.io/projeto-forca-coletiva/
 
 ---
 
