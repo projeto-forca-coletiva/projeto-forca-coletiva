@@ -1,4 +1,4 @@
-# 📌 Nome do Projeto
+# 📌 Força Coletiva
 
 Este projeto consiste no desenvolvimento de um site criado com foco em organização, desempenho e boas práticas de desenvolvimento web.
 
