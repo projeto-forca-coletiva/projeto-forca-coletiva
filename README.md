@@ -4,7 +4,7 @@ Este projeto consiste no desenvolvimento de um site criado com foco em organiza�
 
 ## 👨‍💻 Desenvolvimento
 
-- **Criador do site:** Lucas Assis França  
+- **Criador do site:** Lucas Assis Franca  
 - **GitHub:** https://github.com/Lucasassisfranca  
 
 ## 👑 Propriedade do Projeto
