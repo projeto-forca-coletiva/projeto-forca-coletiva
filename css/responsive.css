@@ -1,0 +1,260 @@
+/* =====================================
+   RESPONSIVO — FORÇA COLETIVA
+   ===================================== */
+
+@media (max-width: 768px) {
+
+    /* ===== HEADER ===== */
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo span {
+        font-size: 20px;
+    }
+
+    .header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .header nav a {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+        height: auto;
+        padding: 140px 20px 80px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+        padding: 70px 0;
+    }
+
+    .about-row,
+    .about-row.reverse {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 80px;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 30px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+
+    .about-image img,
+    .logo-box img {
+        max-width: 260px;
+    }
+
+    /* ===== CARDS ===== */
+    .sobre-cards {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 60px;
+    }
+
+    /* ===== BANNER ===== */
+    .banner-institucional {
+        height: 40vh;
+    }
+
+    /* ===== COLABORADORES ===== */
+    .colaboradores {
+        padding: 70px 0;
+    }
+
+    .colaboradores-logos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .colaborador-item {
+        width: 90px;
+        height: 90px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-contact {
+        justify-content: center;
+    }
+
+    /* ===== PROJETOS ===== */
+    .projeto-content {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .projeto-card {
+        padding: 30px;
+    }
+
+    .projeto-card h3 {
+        font-size: 22px;
+    }
+}
+
+/* =====================================
+   TELAS MUITO PEQUENAS
+   ===================================== */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+}
+
+/* =====================================
+   MENU HAMBÚRGUER — CORRIGIDO
+   ===================================== */
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 28px;
+    height: 3px;
+    background: #14286a;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+/* ===== ANIMAÇÃO DO HAMBÚRGUER → X ===== */
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .header .container {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {
+        position: fixed;
+        top: 70px; /* altura do header */
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 0;
+
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+        transform: translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+
+    nav a {
+        color: #14286a !important;
+        font-size: 18px;
+    }
+
+    nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+/* ===============================
+   MENU HAMBÚRGUER — PÁGINA PROJETOS
+   =============================== */
+
+body.pagina-projetos .menu-toggle span {
+    background: #ffffff;
+}
+
+/* ===============================
+   CORRIGE BARRA PRETA NAS IMAGENS
+   =============================== */
+
+.media-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
